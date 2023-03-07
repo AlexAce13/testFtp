@@ -1,0 +1,35 @@
+name: Deploy
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    #    strategy:
+    #      matrix:
+    #        node-version: [ '16.x' ]
+    steps:
+      - name: 'Get latest code'
+        uses: actions/checkout@v2
+
+      - name: 'set up dependencies'
+        run: npm ci
+
+      - name: 'run build task'
+        run: npm run build
+
+      #      - name: 'change directory'
+      #        run: cd prod
+
+      - name: 'Sync files'
+        uses: SamKirkland/FTP-Deploy-Action@4.3.0
+        with:
+          server: ${{ secrets.REMOTE_HOST }}
+          username: ${{ secrets.FTP_USER }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          server-dir: ${{ secrets.FTP_PATH }}
+          local-dir: ./
+

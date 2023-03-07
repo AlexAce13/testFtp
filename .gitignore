@@ -1,0 +1,7 @@
+/node_modules
+/.idea
+/front/source
+.DS_Store
+/.publish
+/keys
+/prod
