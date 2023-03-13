@@ -1,5 +1,5 @@
 # Welcome to Presto team 2023 (HTML, CSS, JS, GULP, WEBPACK, WP)
-### ./wp-content/themes/project/assets - compiled folder from front
+### ./assets - compiled folder from front
 ### ./front - source folder for front
 ### for start develop front :
 1. install the packages: (npm install)
