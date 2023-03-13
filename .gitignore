@@ -1,7 +1,7 @@
 /node_modules
 package-lock.json
 /.idea
-/front
+/assets
 /source
 .DS_Store
 /.publish
