@@ -3,19 +3,16 @@ import * as nodePath from "path";
 const rootFolder = nodePath.basename(nodePath.resolve());
 
 const srcFolder = "./front/src";
-const buildFolder = "./hello";
-//production
-const srcBack = "./"
-const buildBack = "./prod"
+const buildFolder = "./assets/";
+const production = "./production";
 
 export const path = {
 	build: {
-		js: `${buildFolder}/assets/js/`,
-		css: `${buildFolder}/assets/css/`,
-		html: `${buildFolder}/assets/`,
-		images: `${buildFolder}/assets/img/`,
-		fonts: `${buildFolder}/assets/fonts/`,
-		prod: `${buildBack}`
+		js: `${buildFolder}/js/`,
+		css: `${buildFolder}/css/`,
+		html: `${buildFolder}`,
+		images: `${buildFolder}/img/`,
+		fonts: `${buildFolder}/fonts/`,
 	},
 	src: {
 		js: `${srcFolder}/js/app.js`,
@@ -24,7 +21,6 @@ export const path = {
 		scss: `${srcFolder}/scss/style.scss`,
 		html: [`${srcFolder}/*.html`, `!${srcFolder}/*_*.html`],
 		svgicons: `${srcFolder}/svgicons/*.svg`,
-		prod: `${srcBack}`,
 	},
 	watch: {
 		js: `${srcFolder}/js/**/*.js`,
@@ -33,6 +29,7 @@ export const path = {
 		images: `${srcFolder}/img/**/*.{jpg,jpeg,png,svg,gif,ico,webp}`,
 		svgicons: `${srcFolder}/svgicons/*.svg`,
 	},
+	production: production,
 	clean: buildFolder,
 	buildFolder: buildFolder,
 	srcFolder: srcFolder,

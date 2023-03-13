@@ -4,21 +4,17 @@ export const reset = () => {
   return deleteAsync(`${app.path.clean}/assets`, {force: true});
 }
 
-// export const resetProd = () => {
-// 	return deleteAsync(`${app.path.build.prod}`, {force: true});
-// }
-
-export const resetSomeFiles = () => {
+export const deleteFilesForProd = () => {
 	return deleteAsync(		[
-		`${app.path.build.prod}/.github`,
-		`${app.path.build.prod}/front`,
-		`${app.path.build.prod}/gulp`,
-		`${app.path.build.prod}/wp-content/themes/**/*.html`,
-		`${app.path.build.prod}/.editorconfig`,
-		`${app.path.build.prod}/.gitignore`,
-		`${app.path.build.prod}/gulpfile.js`,
-		`${app.path.build.prod}/package.json`,
-		`${app.path.build.prod}/package-lock.json`,
-		`${app.path.build.prod}/README.md`,
+		`${app.path.production}/.github`,
+		`${app.path.production}/front`,
+		`${app.path.production}/gulp`,
+		`${app.path.production}/wp-content/themes/**/*.html`,
+		`${app.path.production}/.editorconfig`,
+		`${app.path.production}/.gitignore`,
+		`${app.path.production}/gulpfile.js`,
+		`${app.path.production}/package.json`,
+		`${app.path.production}/package-lock.json`,
+		`${app.path.production}/README.md`,
 	], {force: true});
 }
