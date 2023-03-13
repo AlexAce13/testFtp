@@ -10,7 +10,7 @@
     "build": "gulp build --build",
     "otfToTtf": "gulp otfToTtf",
     "git": "gulp git",
-		"production": "gulp production"
+    "production": "gulp production"
   },
   "author": "Anton K",
   "license": "ISC",
@@ -39,6 +39,7 @@
     "webpack-stream": "^7.0.0"
   },
   "dependencies": {
-    "gulp-gh-pages": "^0.5.4"
+    "gulp-gh-pages": "^0.5.4",
+    "production": "^0.0.2"
   }
 }

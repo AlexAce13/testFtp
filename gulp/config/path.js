@@ -5,6 +5,7 @@ const rootFolder = nodePath.basename(nodePath.resolve());
 const srcFolder = "./front/src";
 const buildFolder = "./assets/";
 const production = "./production";
+const currentProject = "./";
 
 export const path = {
 	build: {
@@ -29,6 +30,7 @@ export const path = {
 		images: `${srcFolder}/img/**/*.{jpg,jpeg,png,svg,gif,ico,webp}`,
 		svgicons: `${srcFolder}/svgicons/*.svg`,
 	},
+	currentProject: currentProject,
 	production: production,
 	clean: buildFolder,
 	buildFolder: buildFolder,

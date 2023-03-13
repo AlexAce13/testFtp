@@ -21,6 +21,9 @@ jobs:
       - name: 'run build task'
         run: npm run build
 
+      - name: 'copy production'
+        run: npm run production
+
       #      - name: 'change directory'
       #        run: cd prod
 
@@ -31,5 +34,5 @@ jobs:
           username: ${{ secrets.FTP_USER }}
           password: ${{ secrets.FTP_PASSWORD }}
           server-dir: ${{ secrets.FTP_PATH }}
-          local-dir: ./
+          local-dir: ./production/
 

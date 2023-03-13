@@ -7,9 +7,10 @@ export const reset = () => {
 export const deleteFilesForProd = () => {
 	return deleteAsync(		[
 		`${app.path.production}/.github`,
+		`${app.path.production}/node_modules`,
 		`${app.path.production}/front`,
 		`${app.path.production}/gulp`,
-		`${app.path.production}/wp-content/themes/**/*.html`,
+		`${app.path.production}/assets/**/*.html`,
 		`${app.path.production}/.editorconfig`,
 		`${app.path.production}/.gitignore`,
 		`${app.path.production}/gulpfile.js`,
