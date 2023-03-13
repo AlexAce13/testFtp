@@ -1,7 +1,8 @@
 /node_modules
+package-lock.json
 /.idea
-/front/source
+/front
+/source
 .DS_Store
 /.publish
-/keys
 /prod

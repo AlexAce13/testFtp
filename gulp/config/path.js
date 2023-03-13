@@ -3,7 +3,7 @@ import * as nodePath from "path";
 const rootFolder = nodePath.basename(nodePath.resolve());
 
 const srcFolder = "./front/src";
-const buildFolder = "./wp-content/themes/hello";
+const buildFolder = "./hello";
 //production
 const srcBack = "./"
 const buildBack = "./prod"
